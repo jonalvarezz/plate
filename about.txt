@@ -1,0 +1,5 @@
+Theme name:    plate
+Description:   Keep calm
+Author name:   jonalvarezz
+Author site:   http://jonalvarezz.com
+License:       MIT
