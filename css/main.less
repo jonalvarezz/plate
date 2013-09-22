@@ -1,15 +1,17 @@
 @import 'mixins.less';
 
-html {background-color: @gray}
+html { background-color: @gray }
 body {
 	font-family: 'Raleway', "Helvetica Neue",Arial,sans-serif;
 	font-size: 1.3rem;
 	font-weight: 200;
 }
 
-
+a {
+	text-decoration: none;
+}
 /* ==========================================================================
-   # MAIN ASIDE
+   # MAIN ASIDE 
    ==========================================================================
 */
 .menu-button {
@@ -64,11 +66,24 @@ body {
 	margin: 0;
 	list-style: none;
 	.padding-top(70);
-}
 
-.post-entry {
+	footer {
+		background: @gray;
+		font-size: 13px;
+		.border-bottom-radius(3px);
+	}
+}
+.post-entry, .post-entries footer {
+	padding: 1rem;
+}
+.post-island {
+	background-color: #fff;
 	.border-radius(3px);
-	.transition(all 0.4s ease-in);
+	.box-shadow( 0, 1px, 6px, rgba(0,0,0,.25) );
+	.margin-bottom( 18 );
+}
+.post-title a {
+	color: @darken-blue;
 }
 
 /* ==========================================================================
@@ -84,7 +99,7 @@ body {
 	.menu-button {
 		display: none;
 	}
-	.content { padding-left: 200px }
+	.content { margin-left: 200px }
 	.post-entries {.padding-top(30)}
 
 }

@@ -5,9 +5,9 @@
 	<?php if( has_posts() ): ?>
 		<ul class="post-entries">
 			<?php while( posts() ): ?>
-				<li>
-					<article class="island post-entry">
-						<h2>
+				<li class="post-island">
+					<article class="post-entry">
+						<h2 class="post-title">
 							<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
 						</h2>
 
