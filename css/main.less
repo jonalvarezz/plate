@@ -9,6 +9,11 @@ body {
 
 a {
 	text-decoration: none;
+	color: @alizarin;
+	&:hover {
+		color: @red;
+		text-decoration: underline;
+	}
 }
 /* ==========================================================================
    # MAIN ASIDE 
@@ -68,9 +73,15 @@ a {
 	.padding-top(70);
 
 	footer {
+		position: relative;
 		background: @gray;
 		font-size: 13px;
 		.border-bottom-radius(3px);
+
+		span {
+			position: absolute;
+			right: 0
+		}
 	}
 }
 .post-entry, .post-entries footer {

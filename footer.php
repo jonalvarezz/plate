@@ -21,7 +21,7 @@
     <script src="<?php echo theme_url('js/vendor/less.min.js'); ?>" type="text/javascript"></script>
 	<script src="<?php echo theme_url('js/main.js'); ?>"></script>
 	<script type="text/javascript">
-		$(".post-island.clickable").click(function(){
+		$(".post-entry").click(function(){
 		     window.location=$(this).find("a").attr("href"); 
 		     return false;
 		});

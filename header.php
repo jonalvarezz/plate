@@ -15,7 +15,7 @@
     
     
     <?php // Styles and fonts ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo theme_url('css/base.min.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo theme_url('css/base.min.css'); ?>?ver=1.1.2">
     <link rel="stylesheet/less" type="text/css" href="<?php echo theme_url('css/main.less'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
