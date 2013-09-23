@@ -5,7 +5,7 @@
 	<?php if( has_posts() ): ?>
 		<ul class="post-entries">
 			<?php while( posts() ): ?>
-				<li class="post-island">
+				<li class="post-island clickable">
 					<article class="post-entry">
 						<h2 class="post-title">
 							<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
