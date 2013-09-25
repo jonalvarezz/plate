@@ -1,3 +1,5 @@
+@import 'base.less';
+@import 'uielements.less';
 @import 'mixins.less';
 
 html { background-color: @gray }
@@ -66,7 +68,7 @@ a {
    # POST
    ==========================================================================
 */
-.content { .padding-top(70); }
+.content {.padding-top(70);}
 .post footer {
 	position: relative;
 	background: @gray;
@@ -83,6 +85,7 @@ a {
 	margin: 0;
 	list-style: none;
 }
+.post-entry { overflow: hidden;}
 .post-entry, .post footer {
 	padding: 1rem;
 }
