@@ -36,7 +36,7 @@ a {
 	position: fixed;
 	top: 30px;
 	bottom: 0;
-	left: 6%;
+	left: 4%;
 	z-index: 2;
 	overflow-y: auto;
 	height: 100%;
@@ -66,28 +66,27 @@ a {
    # POST
    ==========================================================================
 */
+.content { .padding-top(70); }
+.post footer {
+	position: relative;
+	background: @gray;
+	font-size: 13px;
+	.border-bottom-radius(3px);
+
+	span {
+		position: absolute;
+		right: 0
+	}
+}
 .post-entries {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	.padding-top(70);
-
-	footer {
-		position: relative;
-		background: @gray;
-		font-size: 13px;
-		.border-bottom-radius(3px);
-
-		span {
-			position: absolute;
-			right: 0
-		}
-	}
 }
-.post-entry, .post-entries footer {
+.post-entry, .post footer {
 	padding: 1rem;
 }
-.post-island {
+.post {
 	background-color: #fff;
 	.border-radius(3px);
 	.box-shadow( 0, 1px, 6px, rgba(0,0,0,.25) );
@@ -119,9 +118,8 @@ a {
 	.menu-button {
 		display: none;
 	}
-	.content { margin-left: 200px }
-	.post-entries {.padding-top(30)}
-
+	.page { padding-left: 13rem }
+	.content {.padding-top(30);	}
 }
 
 /* Mobile/Browser */

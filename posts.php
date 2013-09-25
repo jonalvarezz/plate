@@ -1,11 +1,11 @@
 <?php theme_include('header'); ?>
 
-<section class="content">
+<section class="content wrapper">
 	
 	<?php if( has_posts() ): ?>
 		<ul class="post-entries">
 			<?php while( posts() ): ?>
-				<li class="post-island clickable">
+				<li class="post clickable" id="article-<?php echo article_id(); ?>">
 					<article class="post-entry">
 						<h2 class="post-title">
 							<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
@@ -30,7 +30,7 @@
 		<?php endif; ?>
 
 	<?php else: ?>
-		<p>Looks like there's nothing written yet</p>
+		<p>Nothing here. Take calm, be awesome and write.</p>
 	<?php endif; ?>
 
 </section>

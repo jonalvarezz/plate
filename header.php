@@ -37,36 +37,16 @@
 
 </head>
 
-<body class="<?php echo body_class(); ?>">
-    <div class="page wrapper">        
-        <button type="button" class="menu-button">
-            <svg width="26" height="26">
-                <path d="M0,8 26,8" stroke="#fff" stroke-width="4"></path>
-                <path d="M0,15 26,15" stroke="#fff" stroke-width="4"></path>
-                <path d="M0,22 26,22" stroke="#fff" stroke-width="4"></path>
-            </svg>
-        </button>
-        <aside class="assistive-nav fade perspective" role="complementary" aria-hidden="false">
-            <h1>
-                <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza">
-                    <span class="hide-text"><?php echo site_name(); ?></span>
-                </a>
-            </h1>
-            <p><?php echo site_description(); ?></p>
-
-            <?php if(has_menu_items()): ?>
-                <nav role="navigation">
-                    <ul>
-                        <?php while(menu_items()): ?>
-                            <li <?php echo (menu_active() ? 'class="active"' : ''); ?>>
-                                <a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
-                                    <?php echo menu_name(); ?>
-                                </a>
-                            </li>
-                        <?php endwhile; ?>
-                    </ul>
-                </nav>
-            <?php endif; ?>
-        </aside>
+<body class="<?php echo body_class(); ?>" id="top">
+    <button type="button" class="menu-button">
+        <svg width="26" height="26">
+            <path d="M0,8 26,8" stroke="#fff" stroke-width="4"></path>
+            <path d="M0,15 26,15" stroke="#fff" stroke-width="4"></path>
+            <path d="M0,22 26,22" stroke="#fff" stroke-width="4"></path>
+        </svg>
+    </button>
+    <div class="page">     
+        
+        
 
 
