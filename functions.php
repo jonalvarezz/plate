@@ -36,13 +36,13 @@ function relative_time($date) {
 	}
 
 	$times = array(
-		31104000 => 'year',
-		2592000 => 'month',
-		604800 => 'week',
-		86400 => 'day',
-		3600 => 'hour',
-		60 => 'minute',
-		1 => 'second'
+		31104000 => 'año',
+		2592000 => 'mes',
+		604800 => 'semana',
+		86400 => 'día',
+		3600 => 'hora',
+		60 => 'minuto',
+		1 => 'segundo'
 	);
 
 	foreach($times as $seconds => $title) {
@@ -50,13 +50,13 @@ function relative_time($date) {
 
 		if($rounded > 1) {
 			$rounded = round($rounded);
-			return $rounded . ' ' . pluralise($rounded, $title) . ' ago';
+			return $rounded . ' ' . pluralise($rounded, $title);
 		}
 	}
 }
 
 function twitter_account() {
-	return site_meta('twitter', 'idiot');
+	return site_meta('twitter', 'jonalvarezz');
 }
 
 function twitter_url() {

@@ -12,11 +12,11 @@
 						</h2>
 
 						<div class="post-content">
-							<?php echo article_markdown(); ?>
+							<?php echo article_description(); ?>
 						</div>
 					</article>
 					<footer>
-						Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>.
+						Escrito hace <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>.
 					</footer>
 				</li>
 			<?php endwhile ; ?>

@@ -28,45 +28,19 @@
 	font-size: 1rem;
 	line-height: 1.5;
 	cursor: pointer;
+
+	// now goes chunky
+	.box-shadow( ~"inset" 0 -2px 0 hsla(0, 0%, 0%, 0.12));
 }
 
 .button:active {
-	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	.box-shadow( ~"inset" 0 2px 3px hsla(0, 0%, 0%, 0.3));
 }
 
 .button:focus {
 	outline: thin dotted #444;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
-}
-
-/* Styles */
-.button.hollow {
-	background: transparent;
-	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
-	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
-	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
-}
-
-.button.hollow:active {
-	background: #efefef;
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-}
-
-.button.chunky {
-	-webkit-box-shadow: inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
-	-moz-box-shadow:    inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
-	box-shadow:         inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
-}
-
-.button.chunky:active {
-	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
 
 /* Sizes */
@@ -104,12 +78,6 @@
 	border-radius:         0.356rem;
 }
 
-.button.pill {
-	-webkit-border-radius: 9999rem;
-	-moz-border-radius:    9999rem;
-	border-radius:         9999rem;
-}
-
 /* States */
 .button.disabled,
 .button.disabled:active,
@@ -125,11 +93,25 @@
 	cursor: not-allowed !important;
 }
 
-.button.hollow.disabled,
-.button.hollow.disabled:active,
-.button.hollow[disabled] {
-	background: transparent !important;
-	-webkit-box-shadow: inset 0 0 0 3px #ddd !important;
-	-moz-box-shadow:    inset 0 0 0 3px #ddd !important;
-	box-shadow:         inset 0 0 0 3px #ddd !important;
+/* Colors */
+.button.blue {
+	background-color: @blue;
+	color: #fff;
+	&:hover {
+		background-color: darken(@blue, 3%);
+	}
+}
+.button.orange {
+	background-color: @orange;
+	color: #fff;
+	&:hover {
+		background-color: darken(@orange, 3%);
+	}
+}
+.button.red {
+	background-color: @alizarin;
+	color: #fff;
+	&:hover {
+		background-color: darken(@alizarin, 3%);
+	}
 }
