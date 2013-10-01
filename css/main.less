@@ -14,7 +14,7 @@ a {
 	color: @light-green;
 	&:hover:not(.button) {
 		.transition( color .5s ease );
-		color: @dark-green;
+		color: lighten(@light-green, 7%);
 		//text-decoration: underline;
 	}
 }
@@ -40,12 +40,16 @@ img {
 
 .assistive-nav {
 	position: fixed;
-	top: 30px;
+	top: 0;
 	bottom: 0;
-	left: 4%;
+	left: 0;
 	z-index: 2;
 	overflow-y: auto;
 	height: 100%;
+	padding-top: 35px;
+	padding-left: 3%;
+	background-color: @dark-green;
+	color: white;
 
 	h1 a {
 		text-decoration: none;
@@ -63,7 +67,6 @@ img {
 	.transition(all .5s ease);
 }
 .assitive-menu-open .assistive-nav {
-	top: 35px;
 	.opacity(100);
 	.transform( rotateY( 0 ) );
 }
