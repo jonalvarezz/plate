@@ -15,6 +15,8 @@
     
     
     <?php // Styles and fonts ?>
+    <?php load_sytax_highlighter('styles'); ?>
+
     <link rel="stylesheet/less" type="text/css" href="<?php echo theme_url('css/main.less'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">

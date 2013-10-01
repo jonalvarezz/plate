@@ -45,6 +45,8 @@
     
     <script src="<?php echo theme_url('js/vendor/less.min.js'); ?>" type="text/javascript"></script>
 	<script src="<?php echo theme_url('js/main.js'); ?>"></script>
+    
+    <?php load_sytax_highlighter('scripts'); ?>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
     <script>
