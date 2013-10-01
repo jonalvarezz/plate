@@ -85,8 +85,8 @@ a {
 	margin: 0;
 	list-style: none;
 }
-.post, .post-entry { overflow: hidden;}
-.post-entry, .post footer {
+.post, .post-entry, .post-content { overflow: hidden; }
+.post-content, .post footer {
 	padding: 1rem;
 }
 .post {
@@ -106,7 +106,9 @@ a {
 }
 .post-title {
 	.font_xxl;
-	font-weight: 200
+	font-weight: 200;
+	padding: 0.5rem .75rem 0;
+	margin-bottom: 0;
 }
 .post-title a {
 	color: @darken-blue;
