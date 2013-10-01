@@ -93,5 +93,9 @@ $(function() {
 		}
 	});
 
-	
+	// Clickeable post entries
+	$(".clickable .post-entry").click(function(){
+	     window.location=$(this).find("a").attr("href"); 
+	     return false;
+	});
 });
