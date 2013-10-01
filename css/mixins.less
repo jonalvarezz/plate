@@ -3,7 +3,7 @@
    ==========================================================================
 */
  
-@light-green: 		lighten(#1abc9c, 7%);
+@light-green: 		#1abc9c;
 @dark-green: 			#4b5151;
 @alizarin:        #e74c3c;
 @red: 						#c0392b;
@@ -184,7 +184,7 @@
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
-.opacity-filter { .opacity(100); &:hover{.opacity(90);} }
+.opacity-filter { .opacity(100); &:hover{.opacity(90); .transition(opacity .5s ease); } }
 .opacity-filter-inverse { .opacity(75); &:hover{.opacity(100);} }
 
 .grayscale() {
