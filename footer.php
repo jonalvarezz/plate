@@ -5,26 +5,28 @@
 	</div> <?php // /Page Wrap ?>
 
 	<aside class="assistive-nav fade perspective" role="complementary" aria-hidden="false">
-        <h1>
-            <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza" desc="Jonathan Alvarez Portrait">
-                <span class="hide-text"><?php echo site_name(); ?></span>
-            </a>
-        </h1>
-        <p><?php echo site_description(); ?></p>
+        <div class="wrapper">
+            <h1 class="text_center">
+                <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza" desc="Jonathan Alvarez Portrait">
+                    <span class="hide-text"><?php echo site_name(); ?></span>
+                </a>
+            </h1>
+            <p><?php echo site_description(); ?></p>
 
-        <?php if(has_menu_items()): ?>
-            <nav role="navigation">
-                <ul>
-                    <?php while(menu_items()): ?>
-                        <li <?php echo (menu_active() ? 'class="active"' : ''); ?>>
-                            <a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
-                                <?php echo menu_name(); ?>
-                            </a>
-                        </li>
-                    <?php endwhile; ?>
-                </ul>
-            </nav>
-        <?php endif; ?>
+            <?php if(has_menu_items()): ?>
+                <nav role="navigation">
+                    <ul>
+                        <?php while(menu_items()): ?>
+                            <li <?php echo (menu_active() ? 'class="active"' : ''); ?>>
+                                <a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>">
+                                    <?php echo menu_name(); ?>
+                                </a>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                </nav>
+            <?php endif; ?>
+        </div>
     </aside>
 
 	<?php // Scripts ?>

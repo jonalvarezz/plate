@@ -39,6 +39,7 @@ img {
 }
 
 .assistive-nav {
+	width: 225px;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -46,25 +47,24 @@ img {
 	z-index: 2;
 	overflow-y: auto;
 	height: 100%;
-	padding-top: 35px;
-	padding-left: 3%;
 	background-color: @dark-green;
 	color: white;
+	padding: 35px 10px 0;
 
-	h1 a {
-		text-decoration: none;
-	}
+	h1 { margin: 0; }
+
 	span {
-		background: url(../img/portrait_1.png) no-repeat transparent;
-		height: 130px;
-		width: 180px;
+		background: url(../img/portrait_3.png) no-repeat transparent;
+		height: 182px;
+		width: 175px;
+		margin-left: 25px;
 		display: inline-block;
 	}
 }
 .fade.perspective {
 	.opacity(0);
 	.transform( perspective( 600px ) rotateY( 90deg ) );
-	.transition(all .5s ease);
+	.transition( all .5s ease);
 }
 .assitive-menu-open .assistive-nav {
 	.opacity(100);
