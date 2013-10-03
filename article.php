@@ -9,9 +9,9 @@
 			</figure>
 		<?php endif; ?>
 		<article class="post-entry">
-			<h2 class="post-title">
+			<h1 class="post-title">
 				<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-			</h2>
+			</h1>
 
 			<div class="post-content">
 				<?php echo article_markdown(); ?>

@@ -14,9 +14,9 @@
 									<img src="<?php echo article_custom_field('thumbnail'); ?>" alt="<?php echo article_title(); ?>">
 								</figure>
 							<?php endif; ?>
-							<h2 class="post-title">
+							<h1 class="post-title">
 								<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
-							</h2>
+							</h1>
 						</header>
 						<div class="post-content">
 							<?php echo article_description(); ?>
