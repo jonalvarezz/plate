@@ -1,26 +1,25 @@
 <?php theme_include('header'); ?>
 
 <section class="content wrapper">
-	<div class="post" id="article-<?php echo article_id(); ?>">
+	<article class="post" id="post-entry-<?php echo article_id(); ?>">
+		<header>
 		<?php // Featured Image ?>
 		<?php if ( article_custom_field('thumbnail') ) : ?>
 			<figure class="feat-image strip text_center" style="background-color: <?php echo article_custom_field('thumbnail-bg', '#f9f9f9'); ?> !important;">
 				<img src="<?php echo article_custom_field('thumbnail'); ?>" alt="<?php echo article_title(); ?>">
 			</figure>
 		<?php endif; ?>
-		<article class="post-entry">
 			<h1 class="post-title">
 				<a href="<?php echo article_url(); ?>" title="<?php echo article_title(); ?>"><?php echo article_title(); ?></a>
 			</h1>
-
-			<div class="post-content">
-				<?php echo article_markdown(); ?>
-			</div>
-		</article>
+		</header>
+		<div class="post-content">
+			<?php echo article_markdown(); ?>
+		</div>
 		<footer>
 			Escrito hace <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>.
 		</footer>
-	</div>
+	</article>
 </section>
 
 <?php theme_include('footer'); ?>
