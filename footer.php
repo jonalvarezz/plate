@@ -6,7 +6,7 @@
 
 	<aside class="assistive-nav fade perspective" role="complementary" aria-hidden="false">
         <h1>
-            <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza">
+            <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza" desc="Jonathan Alvarez Portrait">
                 <span class="hide-text"><?php echo site_name(); ?></span>
             </a>
         </h1>
