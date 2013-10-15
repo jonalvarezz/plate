@@ -179,7 +179,7 @@
   filter: ~"alpha(opacity=@{opacity})";
 }
 .opacity-filter { .opacity(100); &:hover{.opacity(90); .transition(opacity .5s ease); } }
-.opacity-filter-inverse { .opacity(75); &:hover{.opacity(100);} }
+.opacity-filter-inverse { .opacity(75); &:hover{.opacity(100); .transition(opacity .4s ease); } }
 
 .grayscale() {
   filter: none; //fallback

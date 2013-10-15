@@ -20,6 +20,11 @@
     <link rel="stylesheet/less" type="text/css" href="<?php echo theme_url('css/main.less'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
+
+    <?php // Load font awesome only in articles ?>
+    <?php if( is_article() ) : ?>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <?php endif ; ?>
     
     <?php // Facebook Open graph support ?>
     <meta property="og:title" content="<?php echo site_name(); ?>">

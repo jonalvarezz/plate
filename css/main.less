@@ -26,30 +26,30 @@ img {
    ==========================================================================
 */
 .menu-button {
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 2;
-	padding: 10px 16px;
-	border: 0 none;
-	background-color: rgba(33, 33, 33, 0.7);
-	color: rgb(255, 255, 255);
-	text-decoration: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background-color: rgba(33, 33, 33, 0.7);
+	border: 0 none;
+	color: rgb(255, 255, 255);
+	padding: 10px 16px;
+	position: fixed;
+	right: 0;
+	text-decoration: none;
+	top: 0;
+	z-index: 2;
 }
 
 .assistive-nav {
-	width: 225px;
+	background-color: @dark-green;
+	bottom: 0;
+	color: white;
+	height: 100%;
+	left: 0;
+	overflow-y: auto;
+	padding: 35px 10px 0;
 	position: fixed;
 	top: 0;
-	bottom: 0;
-	left: 0;
+	width: 225px;
 	z-index: 2;
-	overflow-y: auto;
-	height: 100%;
-	background-color: @dark-green;
-	color: white;
-	padding: 35px 10px 0;
 
 	h1 { margin: 0; }
 }
@@ -64,10 +64,10 @@ img {
 }
 #avatar span {
 	background: url(../img/portrait_3.png) no-repeat transparent;
-	height: 182px;
-	width: 175px;
-	margin-left: 25px;
 	display: inline-block;
+	height: 182px;
+	margin-left: 25px;
+	width: 175px;
 }
 #follow-me-babe { 
 	position: relative;
@@ -86,15 +86,26 @@ img {
 */
 .content {.padding-top(70);}
 .post footer {
-	position: relative;
-	background: @gray;
-	font-size: 13px;
-	border-top: 1px solid darken(@gray,4%);
 	.border-bottom-radius(3px);
+	background: @gray;
+	border-top: 1px solid darken(@gray,4%);
+	font-size: 13px;
+	position: relative;
 
 	span {
 		position: absolute;
 		right: 0
+	}
+}
+#share-me {
+	display: inline;
+	font-size: 17.5px;
+	line-height: 0;
+
+	a { 
+		color: @concrete;
+		padding-left: .6rem;
+		.opacity-filter-inverse;
 	}
 }
 .post, .post-content { overflow: hidden; }
@@ -102,10 +113,10 @@ img {
 	padding: 1rem;
 }
 .post {
-	background-color: #fff;
 	.border-radius(3px);
 	.box-shadow( 0 1px 6px rgba(0,0,0,.25) );
 	.margin-bottom( 18 );
+	background-color: #fff;
 	
 	&.clickable {
 		.transition( all .16s ease-in );
@@ -118,8 +129,8 @@ img {
 .post-title {
 	.font_huge;
 	font-weight: 200;
-	padding: 0.5rem .75rem 0;
 	margin-bottom: 0;
+	padding: 0.5rem .75rem 0;
 }
 .post-title a {
 	color: @darken-blue;
