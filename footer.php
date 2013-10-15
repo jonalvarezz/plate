@@ -30,8 +30,12 @@
             <footer id="follow-me-babe" class="text_center">
                 <i class="social-icons share clickable"><span class="visuallyhidden">Click to follow</span></i>
                 <div id="follow-opts" class="invisible">
-                    <i class="social-icons tw clickable"><span class="visuallyhidden">Sígueme en Twitter</span></i>
-                    <i class="social-icons gplus clickable"><span class="visuallyhidden">Agrégame en Google Plus</span></i>
+                    <a href="//twitter.com/jonalvarezz" target="_blank" title="Sígueme en Twitter">
+                        <i class="social-icons tw clickable"><span class="visuallyhidden">Sígueme en Twitter</span></i>
+                    </a>
+                    <a href="//plus.google.com/102058927482745502681" target="_blank" title="Agrégame en Google Plus">
+                        <i class="social-icons gplus clickable"><span class="visuallyhidden">Agrégame en Google Plus</span></i>
+                    </a>
                 </div>
             </footer>
 
