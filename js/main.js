@@ -11,7 +11,8 @@ $(function() {
 		menu_list = $(".assistive-nav ul"),
 		menu_button = $(".menu-button"),
 		menu_link = $(".assistive-nav a"),
-		flag = false;
+		flag = false,
+		state;
 
 	// Prevent scrolling the entire page while scrolling inside the menu
 	// http://cbrac.co/1bt2GJg
@@ -94,8 +95,32 @@ $(function() {
 	});
 
 	// Clickeable post entries
-	$(".clickable .post-entry").click(function(){
+	$(".post.clickable").click(function(){
 	     window.location=$(this).find("a").attr("href"); 
 	     return false;
 	});
+
+	// Toggle share button functions
+	$("#follow-me-babe .share").on("touchstart click", function() {
+		
+		$("#follow-opts").toggleClass('invisible');
+		state = !state;
+
+		if(state) {
+			$(this).transition({ rotate: '90deg', duration: 180 });
+			$("#follow-opts")
+				.transition({opacity: 1, queue: false})
+				.transition({scale: 1, duration: 230});
+			$("#follow-opts .tw").transition({x: -10, y: 18, duration: 100});
+			$("#follow-opts .gplus").transition({x: 10, y: 18, duration: 100});
+
+		} else {
+			$(this).transition({ rotate: '0deg', duration: 180 });
+			$("#follow-opts")
+				.transition({x: 0, y: 0, duration: 100, queue: false})
+				.transition({scale: 0.5, duration: 230})
+				.transition({opacity: 0});
+		}
+	});
+
 });

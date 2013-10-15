@@ -6,11 +6,11 @@
 
 	<aside class="assistive-nav fade perspective" role="complementary" aria-hidden="false">
         <div class="wrapper">
-            <h1 class="text_center">
+            <header id="avatar" class="text_center">
                 <a href="<?php echo base_url(); ?>" title="Ir donde todo empieza" desc="Jonathan Alvarez Portrait">
                     <span class="hide-text"><?php echo site_name(); ?></span>
                 </a>
-            </h1>
+            </header>
             <p><?php echo site_description(); ?></p>
 
             <?php if(has_menu_items()): ?>
@@ -26,6 +26,15 @@
                     </ul>
                 </nav>
             <?php endif; ?>
+            
+            <footer id="follow-me-babe" class="text_center">
+                <i class="social-icons share clickable"><span class="visuallyhidden">Click to follow</span></i>
+                <div id="follow-opts" class="invisible">
+                    <i class="social-icons tw clickable"><span class="visuallyhidden">Sígueme en Twitter</span></i>
+                    <i class="social-icons gplus clickable"><span class="visuallyhidden">Agrégame en Google Plus</span></i>
+                </div>
+            </footer>
+
         </div>
     </aside>
 
@@ -35,6 +44,7 @@
     <script>window.jQuery || document.write('<script src="<?php echo theme_url("js/vendor/jquery-1.10.2.min.js"); ?>"><\/script>')</script>
     
     <script src="<?php echo theme_url('js/vendor/less.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo theme_url('js/jquery.transit.js'); ?>"></script>
 	<script src="<?php echo theme_url('js/main.js'); ?>"></script>
     
     <?php load_sytax_highlighter('scripts'); ?>

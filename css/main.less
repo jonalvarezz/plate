@@ -52,14 +52,6 @@ img {
 	padding: 35px 10px 0;
 
 	h1 { margin: 0; }
-
-	span {
-		background: url(../img/portrait_3.png) no-repeat transparent;
-		height: 182px;
-		width: 175px;
-		margin-left: 25px;
-		display: inline-block;
-	}
 }
 .fade.perspective {
 	.opacity(0);
@@ -69,6 +61,23 @@ img {
 .assitive-menu-open .assistive-nav {
 	.opacity(100);
 	.transform( rotateY( 0 ) );
+}
+#avatar span {
+	background: url(../img/portrait_3.png) no-repeat transparent;
+	height: 182px;
+	width: 175px;
+	margin-left: 25px;
+	display: inline-block;
+}
+#follow-me-babe { 
+	position: relative;
+	width: 185px;
+	height: 100px;
+	.margin-top(32);
+}
+#follow-opts {
+	.transform( scale(0.5) translate(0,-45px) );
+	opacity: 0;
 }
 
 /* ==========================================================================
@@ -103,7 +112,6 @@ img {
 			margin-top: -6px;
 			.box-shadow( 0 2px 6px rgba(0,0,0,.35) );
 		}
-		cursor: pointer;
 	}
 }
 .post-title {
@@ -118,6 +126,13 @@ img {
 		color: @light-green;
 	}
 }
+
+/* ==========================================================================
+   UTILITIES
+   ==========================================================================
+*/
+
+.clickable { cursor: pointer }
 
 /* ==========================================================================
    MEDIA QUERIES
