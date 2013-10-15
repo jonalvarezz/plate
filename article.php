@@ -17,7 +17,7 @@
 			<?php echo article_markdown(); ?>
 		</div>
 		<footer>
-			Escrito hace <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>.
+			Escrito el <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo date("d/m/Y", article_time()); ?></time> en <a href="Ir a la categoría <?php echo article_category_url();?>"><?php echo article_category();?></a>
 		</footer>
 	</article>
 </section>
