@@ -57,6 +57,30 @@ function load_sytax_highlighter($part) {
 	endif;
 }
 
+// Some SEO enhancement
+
+function ext_title() {
+	$title = '';
+	if( is_article() ) $title = article_title() . ' - ';
+	else if ( is_page() ) $title = page_title() . ' - ';
+
+	return $title . site_name();
+}
+function ext_desc() {
+	if( is_article() )
+		return article_description();
+
+	return site_description();
+}
+function ext_thumb() {
+	if( is_article() )
+		return ( article_custom_field('thumbnail') ? article_custom_field('thumbnail') : theme_url('img/og_image.png') );
+	
+	return theme_url('img/og_image.png');
+}
+
+// Helpers
+
 function numeral($number) {
 	$test = abs($number) % 10;
 	$ext = ((abs($number) % 100 < 21 and abs($number) % 100 > 4) ? 'th' : (($test < 4) ? ($test < 3) ? ($test < 2) ? ($test < 1) ? 'th' : 'st' : 'nd' : 'rd' : 'th'));

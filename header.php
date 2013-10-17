@@ -10,9 +10,8 @@
     
     <title><?php echo page_title('Page can’t be found'); ?> - <?php echo site_name(); ?></title>
 
-    <meta name="description" content="<?php echo site_description(); ?>">
+    <meta name="description" content="<?php echo ext_desc(); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     
     <?php // Styles and fonts ?>
     <?php load_sytax_highlighter('styles'); ?>
@@ -21,18 +20,18 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo rss_url(); ?>">
 
-    <?php // Load font awesome only in articles ?>
+    <?php // Load font awesome only in articles for share buttons ?>
     <?php if( is_article() ) : ?>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <?php endif ; ?>
     
     <?php // Facebook Open graph support ?>
-    <meta property="og:title" content="<?php echo site_name(); ?>">
+    <meta property="og:title" content="<?php echo ext_title(); ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo current_url(); ?>">
-    <meta property="og:image" content="<?php echo theme_url('img/og_image.gif'); ?>">
-    <meta property="og:site_name" content="<?php echo site_name(); ?>">
-    <meta property="og:description" content="<?php echo site_description(); ?>">
+    <meta property="og:image" content="<?php echo ext_thumb(); ?>">
+    <meta property="og:site_name" content="Blog de <?php echo site_name(); ?>">
+    <meta property="og:description" content="<?php echo ext_desc(); ?>">
 
     <?php if(customised()): ?>
         <!-- Custom CSS -->
