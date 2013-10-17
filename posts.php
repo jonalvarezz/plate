@@ -22,7 +22,7 @@
 					<?php echo article_description(); ?>
 				</div>
 				<footer>
-					Escrito hace <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time> y contiene <?php echo count_words(article_markdown()); ?> palabras.
+					Hace <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time>, <?php echo count_words(article_markdown()); ?> palabras.
 				</footer>
 			</article>
 		<?php endwhile ; ?>

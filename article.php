@@ -17,16 +17,16 @@
 			<?php echo article_markdown(); ?>
 		</div>
 		<footer>
-			Escrito el <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo date("d/m/Y", article_time()); ?></time> en <a href="Ir a la categoría <?php echo article_category_url();?>"><?php echo article_category();?></a>.
+			<time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo date("j M. Y", article_time()); ?></time> en <a href="Ir a la categoría <?php echo article_category_url();?>"><?php echo article_category();?></a>.
 			<div id="share-me">
-				<a href="https://twitter.com/share?url=http%3A%2F<?php echo urlencode( article_url() ); ?>&text=<?php echo urlencode(article_title()); ?>&via=jonalvarezz" title="Tuitea esto">
-					<i class="icon-twitter-sign"><span class="visuallyhidden">Tuitea esto</span></i>
+				<a class="icon-twitter" href="https://twitter.com/share?url=http%3A%2F<?php echo urlencode( article_url() ); ?>&text=<?php echo urlencode(article_title()); ?>&via=jonalvarezz" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+					<span class="visuallyhidden">Tuitea esto</span>
 				</a>
-				<a href="" title="Compártelo en Google Plus">
-					<i class="icon-google-plus-sign"><span class="visuallyhidden">Compártelo en Google Plus</span></i>
+				<a class="icon-google-plus-sign" href="https://plus.google.com/share?url=http%3A%2F<?php echo urlencode( article_url() ); ?>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+					<span class="visuallyhidden">Compártelo en Google Plus</span>
 				</a>
-				<a href="" title="Riega la voz en Facebook">
-					<i class="icon-facebook-sign"><span class="visuallyhidden">Riega la voz en Facebook</span></i>
+				<a class="icon-facebook-sign" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F<?php echo urlencode( article_url() ); ?>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" >
+					<span class="visuallyhidden">Riega la voz en Facebook</span>
 				</a>
 			</div>
 		</footer>
